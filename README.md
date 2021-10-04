@@ -24,6 +24,7 @@ Run the python script wiki_details.py with the first argument as folderName.
 This script outputs the most common 100 words as well as the most important words
 for the following wikipedia article.
 https://en.wikipedia.org/wiki/John_Barnes_(film_producer)
+Command : python3 wiki_details.py 'text/AA'
 
 ## Summary :
 
@@ -45,7 +46,7 @@ the frequency distribution of the words.
  
  ['Barnes', 'Wadsworth', 'Encyclopædia', 'Britannica', 'Bolex', 'Belford', 'blue-collar', 'craftsmen', 'rheumatic', 'fever', 'sparked', 'teenage', 'inferior', 'intellectually', 'inconvenience', 'choices', 'artistically', 'Monmouth', 'radio-drama', 'Nordine', 'fiercely', 'protective', 'scripts', 'Judi', 'Dench', 'Douglass', 'Kiley', 'Sternhagen', 'Shaw', 'Shakespeare', 'Moffat', 'magnum', 'opus', 'constraints', 'avoided', 'lesser', 'immense', 'circulated', 'persevered', 'ignite', 'classroom', 'screening', 'theorists', 'opinions', 'Encyclopaedia', 'EB', 'Weisenborn', 'portrayals', 'institutional', 'censorship', 'allude', 'filmmakers', 'relied', 'abundance', "'Bill", 'iconic', 'adaptations', 'Macbeth', 'politically', 'oriented', 'Equality', 'Lost', 'Generation', 'interracial', 'racist']
  
-# References :
+## References :
 
 1) https://github.com/attardi/wikiextractor/wiki
 2) https://en.wikipedia.org/wiki/Tf%E2%80%93idf
