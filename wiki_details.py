@@ -1,11 +1,28 @@
+import sys
 from wiki_extractor import WikiExtractor
 
+"""
+Main entry point of the script file. Simply
+run this script to determine the most common
+words in wikiepedia corpus as well as the most
+important words in wikipedia document '56572679'
+"""
+
+def display_help():
+    print('Please specify the folder which contains the cleaned xml files')
+    print('The typical usage is as follows :')
+    print("python3 wiki_details.py 'text/AA'")
+
 if __name__ == '__main__':
-    folder_name = 'text/AA'
+    if(len(sys.argv) != 2):
+        display_help()
+        exit()
+    folder_name = sys.argv[1]
     w = WikiExtractor(folder_name= folder_name)
     random_doc = '56572679'
     net_word_list, doc_word_dict = w.tokenize()
-    print('100 Most common words in Wikipedia Corpus is as follows')
+    print()
+    print('100 Most common words with count in Wikipedia Corpus is as follows')
     print()
     f = (w.get_frequency_dist(net_word_list))
     print(w.get_most_common_words(f, 100))
@@ -15,4 +32,4 @@ if __name__ == '__main__':
     threshold_list = [0.001]
     for threshold in threshold_list:
         important_words_list = w.get_most_important_words(words_importance_dict, threshold)
-        print(f'Threshold set is {threshold}\n\n. The most imporant words in the doc with doc_id {random_doc} are ', important_words_list)
+        print(f'Threshold set is {threshold}.\n\n The most imporant words in the doc with doc_id {random_doc} are ', important_words_list)
